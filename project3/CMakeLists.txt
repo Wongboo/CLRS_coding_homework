@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.17)
+project(project3)
+
+set(CMAKE_CXX_STANDARD 20)
+
+if(MSVC)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /arch:AVX2")
+else()
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
+endif()
+
+add_subdirectory(ex1)
+add_subdirectory(ex2)
